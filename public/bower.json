@@ -1,0 +1,17 @@
+{
+  "name": "public",
+  "homepage": "https://github.com/s1ckdark/nomad",
+  "authors": [
+    "dave <dave.lee@uniquedonut.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

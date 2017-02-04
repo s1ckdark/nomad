@@ -25,6 +25,15 @@ app.use('/', routes);
 app.use('/contact', routes);
 app.use('/users', users);
 
+app.get('/Cookie',function(req, res){
+	var date = new Date();
+	res.cookie('visit',Date.now(),{expires:new Date(Date.now()+1000*60*10)});
+	res.cookie('max',Date.now(),{expires:new Date(Date.now()+1000*60*10)});
+
+	res.writeHead({'Content-Type':'text/html'});
+	res.end(JSON.stringify(res.cookies));
+	
+});
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
