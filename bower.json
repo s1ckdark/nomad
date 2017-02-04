@@ -1,0 +1,21 @@
+{
+  "name": "nomad",
+  "description": "",
+  "main": "",
+  "authors": [
+    "dave <dave.lee@uniquedonut.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/s1ckdark/nomad",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angular2#^1.6.1",
+    "jquery": "^3.1.1"
+  }
+}
