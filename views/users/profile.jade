@@ -1,0 +1,36 @@
+extends ../layout
+block content
+	h1= title
+	p Welcome to #{title}
+
+	h1= title
+	h2= user.name
+	h3 경력사항
+	p= user.bio
+
+// users.js에 "router.delete('/:username', function(req,res)" 부분과 같이 method를 delete
+// 를 전송하며 매개변수로 사용자 정보를 전송하여 삭제처리
+
+// 사용자 삭제
+// users.js에서 "var methodOverride = require('method-override');"
+// 와 같이 Method를 오버라이드 하여 사용할 수 있게 했으므로 아래와 같이 POST로 최초에 전송을 하지만 받는쪽에서는
+// 실제 처리되는 method는 DELETE로 처리할 수 있도록 한다.
+	form(action="/users/"+index+"?_method=DELETE",method="POST")
+		input(type="submit", value="사용자 삭제")
+		<br/>
+
+// 사용자 수정
+	form(action="/users/"+index+"/edit",method="POST")
+		p
+			label(for="username") 사용자명<br/>
+			input#username(name="username",value=user.username)
+		p
+			label(for="name") 이름<br/>
+			input#name(name="name",value=user.name)
+		p
+			label(for="bio") 경력<br/>
+			input#bio(name="bio",value=user.bio)
+		p
+			input(type="submit", value="사용자 수정")
+
+

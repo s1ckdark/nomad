@@ -1,0 +1,11 @@
+extends ../layout.jade
+ 
+block content
+   h1= title
+   p
+      a(href="/users/new") 사용자 등록
+   ul
+      - for(var username in users){
+         li
+         a(href="/users/"+encodeURIComponent(username))= users[username].name
+      - };

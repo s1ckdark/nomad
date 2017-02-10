@@ -4,6 +4,7 @@ var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var methodOverride = require('method-override');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -25,7 +26,7 @@ app.use('/', routes);
 app.use('/contact', routes);
 app.use('/users', users);
 
-app.get('/Cookie',function(req, res){
+app.use(function(req, res){
 	var date = new Date();
 	res.cookie('visit',Date.now(),{expires:new Date(Date.now()+1000*60*10)});
 	res.cookie('max',Date.now(),{expires:new Date(Date.now()+1000*60*10)});

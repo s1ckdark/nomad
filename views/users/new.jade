@@ -1,0 +1,19 @@
+extends ../layout
+block content
+	h1= title
+	p Welcome to #{title}
+	h1= title
+	form(method="POST", action="/users")
+		p
+			label(for="username") 사용자명<br/>
+			input#username(name="username")
+		p
+			label(for="name") 이름<br/>
+			input#name(name="name")
+		p
+			label(for="bio") 경력<br/>
+			textarea#bio(name="bio")
+		p
+			input(type="submit", value="사용자 생성")
+
+

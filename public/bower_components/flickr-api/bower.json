@@ -1,0 +1,16 @@
+{
+	"name": "flickr-api",
+	"version": "",
+	"main": [
+		"flickr.js"
+	],
+	"ignore": [],
+	"keywords": [
+		"javascript",
+		"flickr",
+		"api"
+	],
+	"dependencies": {
+		"jquery": ">= 1.9.0"
+	}
+}
